@@ -1,0 +1,129 @@
+body {
+    background-image: url("./building.jpg");
+    background-size: 100%;
+}
+.clock {
+    border-radius: 50%;
+    border: 3px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #404040;
+    background-color: rgba(0,0,0,0.7);
+    height: 240px;
+    width: 240px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.clockFace {
+    height: 100%;
+    width: 100%;
+    line-height: 100%;
+}
+
+/*clock-face dials*/
+.tickMark {
+    border: 2px solid #ffc600;
+    transform-origin: 100%;
+}
+.num {
+    height: 100%;
+    position: absolute;
+}
+.num div {
+    width: 1em;
+    line-height: 2em;
+    color: #ffc600;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center !important;
+    vertical-align: middle;
+    display: inline;
+}
+.num1, .num2, .num4, .num5, .num7, .num8, .num10, .num11 {
+    left: calc(50% - 2px);
+}
+.num3, .num9 {
+    left: calc(50% - 8px);
+}
+.num6 {
+    left: calc(50% - 7px);
+}
+.num12 {
+    left: calc(50% - 14px);
+}
+.num1 {
+    transform: rotate(30deg);
+}
+.num2 {
+    transform: rotate(60deg);
+}
+.num3 {
+    transform: rotate(90deg);
+}
+.num3 div {
+    transform: rotate(-90deg);
+    display: block !important;
+}
+.num4 {
+    transform: rotate(120deg);
+}
+.num5 {
+    transform: rotate(150deg);
+}
+.num6 {
+    transform: rotate(180deg);
+}
+.num6 div {
+    transform: rotate(-180deg);
+    display: block !important;
+}
+.num7 {
+    transform: rotate(210deg);
+}
+.num8 {
+    transform: rotate(240deg);
+}
+.num9 {
+    transform: rotate(270deg);
+}
+.num9 div {
+    transform: rotate(90deg);
+    display: block !important;
+}
+.num10 {
+    transform: rotate(300deg);
+}
+.num11 {
+    transform: rotate(330deg);
+}
+/*.num12 div {*/
+    /*display: block !important;*/
+/*}*/
+.num3 div, .num6 div, .num9 div, .num12 div {
+    font-size: 20px !important;
+}
+
+/*tickers*/
+.hand {
+    top: 50%;
+    display: inline;
+    position: absolute;
+    transform-origin: 100%; /*will rotate the hands on the right origin. default is middle*/
+    transform: rotate(90deg); /*will start the tickers at 12 to operate like a clock*/
+}
+#secondsHand {
+    border: 1px solid #ffc600;
+    width: 46%; /*each ticker should be half the diameter of the actual clockface*/
+}
+#minutesHand {
+    border: 2px solid rgba(0,0,0,0.7);
+    border-radius: 2px;
+    box-shadow: 0 0 3px #737373;
+    width: 46%; /*each ticker should be half the diameter of the actual clockface*/
+}
+#hoursHand {
+    border: 2px solid rgba(0,0,0,0.7);
+    width: 20%;
+    margin-left: 26%;
+}
